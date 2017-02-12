@@ -6,4 +6,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="pass_hint">Password</string>
+    <string name="user_hint">Username</string>
+    <string name="btn_1_text">button1</string>
+    <string name="btn_2_text">button2</string>
+    <string name="btn_3_text">button3</string>
+    <string name="btn_4_text">Logout</string>
+    <string name="login_btn">Submit</string>
 </resources>

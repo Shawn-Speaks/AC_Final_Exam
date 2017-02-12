@@ -9,13 +9,159 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:id="@+id/profile_container"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile_image_large"
+            android:background="@drawable/blastoise"
+            android:layout_width="@dimen/profile_iv_large"
+            android:layout_height="@dimen/profile_iv_large"
+            android:layout_centerHorizontal="true"/>
+        <View
+            android:id="@+id/whitespace"
+            android:layout_below="@id/profile_image_large"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/nav_header_height">
+
+        </View>
+
+        <RelativeLayout
+            android:background="@color/colorPrimary"
+
+            android:layout_below="@id/whitespace"
+            android:id="@+id/linearRow"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+
+                android:id="@+id/relative_column_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/row_btn_1"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="@dimen/small_btn"
+                    android:layout_height="@dimen/small_btn"
+                    android:src="@drawable/ic_action_heart"/>
+
+                <TextView
+                    android:text="@string/btn_1_text"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row_btn_1" />
+
+             </RelativeLayout>
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+
+                android:id="@+id/relative_column_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/relative_column_1"
+                android:layout_toRightOf="@id/relative_column_1">
+
+                <ImageButton
+                    android:id="@+id/row_btn_2"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="@dimen/small_btn"
+                    android:layout_height="@dimen/small_btn"
+                    android:src="@drawable/ic_action_gmail"/>
+
+                <TextView
+                    android:text="@string/btn_2_text"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row_btn_2" />
+
+             </RelativeLayout>
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+
+                android:id="@+id/relative_column_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/relative_column_2"
+                android:layout_toEndOf="@id/relative_column_2">
+
+                <ImageButton
+                    android:id="@+id/row_btn_3"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="@dimen/small_btn"
+                    android:layout_height="@dimen/small_btn"
+                    android:src="@drawable/ic_action_star_0"/>
+
+                <TextView
+                    android:text="@string/btn_3_text"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row_btn_3"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:background="@color/colorPrimary"
+
+                android:id="@+id/relative_column_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/relative_column_3"
+                android:layout_toRightOf="@id/relative_column_3">
+
+                <ImageButton
+                    android:id="@+id/row_btn_4"
+                    android:src="@drawable/ic_action_io"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="@dimen/small_btn"
+                    android:layout_height="@dimen/small_btn" />
+                <TextView
+                    android:text="@string/btn_4_text"
+                    android:padding="@dimen/padding_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/row_btn_4" />
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
+        android:background="@color/navDrawerBottom"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_profile"
-        app:menu="@menu/activity_profile_drawer" />
+        app:menu="@menu/activity_profile_drawer"
+        android:theme="@style/NavigationTheme">
+
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
